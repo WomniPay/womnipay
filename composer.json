@@ -1,0 +1,36 @@
+{
+	"name": "womnipay/womnipay",
+	"description": "OmniPay integration for WooCommerce, Gravity Forms, Easy Digital Downloads...",
+	"license": "GPL-3.0-or-later",
+	"type": "wordpress-plugin",
+	"version": "1.0.0",
+	"authors": [
+		{
+			"name": "WomniPay",
+			"email": "info@womnipay.com",
+			"homepage": "https://womnipay.com"
+		}
+	],
+	"homepage": "https://github.com/womnipay/WomniPay",
+	"require": {
+		"php": ">=8.0",
+        "inpsyde/wp-context": "~1.5.0",
+		"league/omnipay": "^3.2",
+		"omnipay/dummy": "^3.0"
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"autoload": {
+		"psr-4": {
+			"Womnipay\\Backend\\": "backend/",
+			"Womnipay\\Engine\\": "engine/",
+			"Womnipay\\Frontend\\": "frontend/",
+			"Womnipay\\Integrations\\": "integrations/"
+		}
+	},
+	"config": {
+		"allow-plugins": {
+			"php-http/discovery": true
+		}
+	}
+}
